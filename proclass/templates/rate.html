@@ -7,7 +7,7 @@
         background-image: url("{{url_for('static', filename='background.png')}}");
         color: floralwhite;
     }
-    
+
     div.rateForm{
         padding-left: 35px;
         padding-bottom: 10px;
@@ -19,7 +19,7 @@
         border: 5px solid #083b66;
         border-style: dashed;
     }
-    
+
     div.topnavbar{
         overflow: hidden;
         background-color: azure;
@@ -49,7 +49,7 @@
 </style>
 </head>
 <body>
-    
+
 <div class="topnavbar">
         <a href="{{ url_for('class_forum') }}">Forum</a>
         <a href="{{ url_for('portfolio') }}">My Portfolio</a>
@@ -62,7 +62,7 @@
     <form>
         <h4>Professor Name: William Garrison</h4>
         <h4>Course Number: CS 1501</h4>
-        <h4>Taking Term: 
+        <h4>Taking Term:
             <select name="year">
               <option value="2000">2000</option>
               <option value="2001">2001</option>
@@ -93,7 +93,7 @@
         </h4>
         <h4>Syllabus Upload (must in PDF format)(+20pt): <input type="file" id="myFile"></h4>
         <br>
-        
+
         <h4>Rate List</h4>
         <section name="ClassOrganization">
           (10/25) Class Organization (Messy-1; Well Organized-10)<br>
@@ -110,17 +110,17 @@
           <input type="range" id="range3" name="Lecture" min="1" max="10" step="1" onchange="updateTextInput(this.value, 'textInput3');">
           <input type="text" id="textInput3" value="">
         </section>
-        
+
         <br>
         <br>
-        
+
         <h4>Comment</h4>
         <textarea rows="4" cols="50" placeholder=" Write your comments to this professor (+20pt)"></textarea>
-        
+
         <br>
         <input type="submit" value="Submit+50pt">
-        
-    </form> 
+
+    </form>
 </div>
 
 </body>
