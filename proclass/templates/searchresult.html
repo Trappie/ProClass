@@ -3,19 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>Search Result</title>
+    <style >
+      #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
+    </style>
   </head>
   <body>
     <h1>{{ category + " : " + name}}</h1>
     {% if category == 'Class' %}
-      <ul id="class_result">
+      <ul class="myUL" id="class_result">
         {% for result in results %}
-          <li>{{result}}</li>
+          <li><a href="{{url_for('pro_class', class_string=(name + '_' + result.name))}}">{{result.name}}</a></li>
         {% endfor %}
       </ul>
     {% else %}
-      <ul id="professor_result">
+      <ul class="myUL" id="professor_result">
         {% for result in results %}
-          <li>{{result}}</li>
+          <li><a href="{{url_for('pro_class', class_string=(result.name + '_' + name))}}">{{name}}</a></li>
         {% endfor %}
       </ul>
     {% endif %}
