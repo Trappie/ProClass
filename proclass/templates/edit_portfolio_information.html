@@ -2,18 +2,50 @@
 <head>
 <style>    
 body{
-    background-image: url("assets/page_back.png"); 
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 20; 
+    background-image: url("{{url_for('static', filename='background.png')}}");
+    color: black;
 }
+
+div.topnavbar{
+    overflow: hidden;
+    background-color: azure;
+}
+div.topnavbar a{
+    float:right;
+    color: #4c96d7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 28%;
+}
+div.topnavbar a:hover{
+    background-color: #083b66;
+    font-weight: bold;
+    color:whitesmoke;
+}
+div.topnavbar a.active{
+    background-color: #4c96d7;
+    color: whitesmoke;
+    font-weight: bold;
+}
+div.topnavbar img{
+    padding-left: 20px;
+}
+    
 #basic_info{
-    padding-left: 10px; 
-    padding-bottom: 10px; 
-    margin-top: 30px; 
-    width: 30%; 
-    float: center; 
-    margin-left: 500px; 
-}
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    background-color: aliceblue;
+    float: center;
+    margin-left: 390px;
+    color:#083b66;
+    border: 5px solid #083b66;
+    height: 50%;
+    width: 30%;
+    border-style: dashed;
 
 </style>
     <title>Edit Personal Information</title>

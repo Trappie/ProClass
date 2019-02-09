@@ -4,7 +4,7 @@
     <style>
         body{
             background-image: url("{{url_for('static', filename='background.png')}}");
-            color: floralwhite;
+            color: black;
         }
         div.topnavbar{
             overflow: hidden;
@@ -32,24 +32,39 @@
         div.topnavbar img{
             padding-left: 20px;
         }
-    </style>
+        div.professor_Information{
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            background-color: aliceblue;
+            float: left;
+            margin-left: 360px;
+            color:#083b66;
+            border: 5px solid #083b66;
+            height: 80%;
+            width: 40%;
+            border-style: dashed;
+        }
+        </style>
 </head>
 <body>
+    
     <div class="topnavbar">
-        <a href="#Forum">Forum</a>
-        <a href="#My Portfolio">My Portfolio</a>
-        <a href="#search">Search</a>
-        <img src="assets/logo.png" width="70px" height="50px">
+        <a href="{{ url_for('class_forum') }}">Forum</a>
+        <a href="{{ url_for('portfolio') }}">My Portfolio</a>
+        <a href="{{ url_for('homepage') }}">Search</a>
+        <img src="{{ url_for('static', filename='logo.png')}}" width="70px" height="50px">
     </div>
-    <div class = "professor Information">
-        <div id ="Personal Information">
-            <p>"add an image here"</p>
-            <h3>Personal Information</h3>
-            <p><strong>Name: </strong>Garrison</p>
-            <p><strong>Office: </strong>sennote square 5129</p>
+    <div class = "professor_Information">
+        <div id ="Personal_Information">
+            <img src = "{{url_for('static', filename='Garisson.jpg')}}" weidth="100px" height ="100px" alt="garisson.jpg">
+            <h3>Professor Information</h3>
+            <p><strong>Name: </strong>William Garrison</p>
+            <p><strong>Office: </strong>Sennote Square 5129</p>
             <p><strong>Email: </strong> bill@cs.pitt.edu</p>
-            <p><strong>Departments: </strong>Computer Science</p>
-            <input type="button" value="Go to Chat Room" onclick="window.location.href='file:///Users/xjzayd/Desktop/ProClass/proclass/templates/Chat_room.html'" />
+            <p><strong>Department: </strong>Computer Science</p>
+            <br>
         </div>
         <div id = "Research">
             <h3>Research</h3>

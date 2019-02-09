@@ -17,6 +17,7 @@
         margin-left: 360px;
         color:#083b66;
         border: 5px solid #083b66;
+        border-style: dashed;
     }
     
     div.topnavbar{
@@ -50,10 +51,10 @@
 <body>
     
 <div class="topnavbar">
-        <a href="#Forum">Forum</a>
-        <a href="#My Portfolio">My Portfolio</a>
-        <a href="#search">Search</a>
-        <img src="assets/logo.png" width="70px" height="50px">
+        <a href="{{ url_for('class_forum') }}">Forum</a>
+        <a href="{{ url_for('portfolio') }}">My Portfolio</a>
+        <a href="{{ url_for('homepage') }}">Search</a>
+        <img src="{{ url_for('static', filename='logo.png')}}" width="70px" height="50px">
 </div>
 
 <div class="rateForm">
@@ -96,40 +97,21 @@
         <h4>Rate List</h4>
         <section name="ClassOrganization">
           (10/25) Class Organization (Messy-1; Well Organized-10)<br>
-          <input type="range" name="ClassOrganization" min="1" max="10" step="1" onchange="updateTextInput(this.value, 'textInput1');">
+          <input type="range" id="range1" name="ClassOrganization" min="1" max="10" step="1" onchange="updateTextInput(this.value, 'textInput1');">
           <input type="text" id="textInput1" value="">
         </section>
         <section name="Exam">
           (8/25) Difficult of Exam/Quiz/Paper (Easy-1; Hard-10)<br>
-          <input type="range" name="rangeInput" min="1" max="10" step="1" onchange="updateTextInput(this.value, 'textInput2');">
+          <input type="range" id="range2" name="rangeInput" min="1" max="10" step="1" onchange="updateTextInput(this.value, 'textInput2');">
           <input type="text" id="textInput2" value="">
         </section>
         <section name="Lecture">
           (7/25) Lecture Style (Boring-1; Interesting-10)<br>
-          <input type="range" name="Lecture" min="1" max="10" step="1" onchange="updateTextInput(this.value, 'textInput3');">
+          <input type="range" id="range3" name="Lecture" min="1" max="10" step="1" onchange="updateTextInput(this.value, 'textInput3');">
           <input type="text" id="textInput3" value="">
         </section>
         
-        
-        <form oninput="calresult.value=calcOverall('textInput1', 'textInput2', 'textInput3');">
-            <button id="button" onchange="calresult.value">Predicted Overall</button>
-            <output name="calresult" for="  "></output>
-        </form>
-        
-        
-        
-
-        <script>
-            function updateTextInput(val, input) {
-              document.getElementById(input).value=val; 
-            }
-            function calcOverall(input1, input2, input3, output1){
-                var val1 = document.getElementById(input1).value;
-                var val2 = document.getElementById(input2).value;
-                var val3 = document.getElementById(input3).value;
-                return val1+(val2/10)*(8/25)+(val2/10)*(7/25);
-            }
-        </script>
+        <br>
         <br>
         
         <h4>Comment</h4>
