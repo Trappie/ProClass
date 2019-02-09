@@ -3,10 +3,31 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  margin: 0 auto;
-  max-width: 1800px;
-  padding: 0 20px;
+div.topnavbar{
+overflow: hidden;
+background-color: azure;
+}
+div.topnavbar a{
+    float:right;
+    color: #4c96d7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 28%;
+}
+div.topnavbar a:hover{
+    background-color: #083b66;
+    font-weight: bold;
+    color:whitesmoke;
+}
+div.topnavbar a.active{
+    background-color: #4c96d7;
+    color: whitesmoke;
+    font-weight: bold;
+}
+div.topnavbar img{
+    padding-left: 20px;
 }
 
 .container {
@@ -15,35 +36,10 @@ body {
   border-radius: 15px;
   padding: 10px;
   margin: 5px 0;
-  top: 80px;
+  margin-top: -2px;
   width: 1050px;
   height: 100px;
   float: right;
-}
-
-.darker {
-  border-color: #ccc;
-  background-color: #ddd;
-}
-
-.container::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.container img {
-  float: left;
-  max-width: 60px;
-  width: 100%;
-  margin-right: 20px;
-  border-radius: 50%;
-}
-
-.container img.right {
-  float: right;
-  margin-left: 20px;
-  margin-right:0;
 }
 
 .time-right {
@@ -62,9 +58,8 @@ body {
   border-radius: 1px;
   padding: 10px;
   margin: 10px 0;
-  top: 80px;
   width: 1050px;
-  height: 200px;
+  height: 180px;
   float:right;
 }
 
@@ -94,7 +89,15 @@ body {
 </head>
 <body>
 
+  <div class="topnavbar">
+      <a class="active" href="#Forum">Forum</a>
+      <a href="#My Portfolio">My Portfolio</a>
+      <a href="#search">Search</a>
+      <img src="assets/logo.png" width="70px" height="50px">
+  </div>
+
 <h2 >CS 1501</h2>
+
 
 <div class="container">
   <!-- <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;"> -->
