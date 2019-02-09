@@ -1,3 +1,22 @@
+body{ 
+    background-image: url("images/background.jpeg"); 
+    font-family: 'Courier New', Courier, monospace; 
+}
+.container{
+    /*background-color: lightblue;*/
+    height: 300px;
+    width: 300px; 
+    margin: auto; 
+    margin-top: 10%; 
+    /* border: 1px rgb(19, 17, 17) solid;  */
+    padding: 20px; 
+    font-size: 20px; 
+    text-align: center; 
+}
+.container input{
+    padding: 10px; 
+    margin: 10px; 
+}
 #basic_info img{
     width: 35%; 
     height: 40%;
