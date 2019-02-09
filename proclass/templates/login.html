@@ -2,27 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
   <style>
-  body{ 
-    background-image: url("assets/background.jpeg"); 
-    font-family: 'Courier New', Courier, monospace; 
+  body{
+    background-image: url("{{url_for('static', filename='background.jpeg')}}");
+    font-family: 'Courier New', Courier, monospace;
   }
   .container{
       /*background-color: lightblue;*/
       height: 300px;
-      width: 300px; 
-      margin: auto; 
-      margin-top: 10%; 
+      width: 300px;
+      margin: auto;
+      margin-top: 10%;
       /* border: 1px rgb(19, 17, 17) solid;  */
-      padding: 20px; 
-      font-size: 20px; 
-      text-align: center; 
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
   }
   .container input{
-      padding: 10px; 
-      margin: 10px; 
+      padding: 10px;
+      margin: 10px;
   }
   #basic_info img{
-      width: 35%; 
+      width: 35%;
       height: 40%;
   }
   button{
@@ -35,13 +35,15 @@
   <body>
     <div class="container">
       <div>
-          <img src = "assets/logo.png" weidth="200" height ="200">
+          <img src = "{{url_for('static', filename='logo.png')}}" weidth="200" height ="200">
       </div>
       <h4>Please Login:</h4>
       <form class="form-inline" action="" method="post">
         <input type="text" class="form-control" placeholder="Email" name="email" value="{{request.form.email}}">
         <input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password}}">
-        <p><input class="btn btn=default" type="submit" value="Login"><button>sign up</button></p>
+        <p><input class="btn btn=default" type="submit" value="Login">
+          <input class="btn" type="submit" value="Sign In">
+          </p>
       </form>
     </div>
   </body>
