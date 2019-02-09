@@ -5,7 +5,7 @@
 <style>
 body {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1800px;
   padding: 0 20px;
 }
 
@@ -14,11 +14,11 @@ body {
   background-color: #f1f1f1;
   border-radius: 15px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 5px 0;
   top: 80px;
-  right: 10;
   width: 1050px;
   height: 100px;
+  float: right;
 }
 
 .darker {
@@ -63,49 +63,38 @@ body {
   padding: 10px;
   margin: 10px 0;
   top: 80px;
-  right: 0;
   width: 1050px;
   height: 200px;
+  float:right;
 }
 
 .member{
   border: 2px solid #dedede;
   background-color: #ffffff;
   border-radius: 1px;
-  right = 10
+  float: left;
+  position: absolute;
+  top: 80px;
+  width: 350px;
+  height: 300px;
 }
 
-div.topnavbar{
-overflow: hidden;
-background-color: azure;
+.group{
+  border: 2px solid #dedede;
+  background-color: #ffffff;
+  border-radius: 1px;
+  float: left;
+  position: absolute;
+  top: 400px;
+  width: 350px;
+  height: 400px;
 }
-div.topnavbar a{
-    float:right;
-    color: #4c96d7;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    width: 28%;
-}
-div.topnavbar a:hover{
-    background-color: #083b66;
-    font-weight: bold;
-    color:whitesmoke;
-}
-div.topnavbar a.active{
-    background-color: #4c96d7;
-    color: whitesmoke;
-    font-weight: bold;
-}
-div.topnavbar img{
-    padding-left: 20px;
-}
+
 </style>
 </head>
 <body>
 
-<h2>CS 1501</h2>
+<h2 >CS 1501</h2>
 
 <div class="container">
   <!-- <img src="/w3images/bandmember.jpg" alt="Avatar" style="width:100%;"> -->
@@ -135,14 +124,28 @@ div.topnavbar img{
   <p align="left" >|</p>
 </div>
 
-<!-- <div class="member" style="position">
-  <ul>
+<div class="member" >
+  <p><b><font size="6">Member</font></b></p>
     <li>Duo</li>
     <li>ZhuoFei</li>
     <li>Siyu</li>
     <li>Di</li>
-  </ul>
-</div> -->
+</div>
+
+<div class="group" >
+  <p><b><font size="6">Group</font></b></p>
+    <li>CS 0401</li>
+    <li>CS 0401</li>
+    <li>CS 0445</li>
+    <li>CS 0447</li>
+    <li>CS 0449</li>
+    <li>CS 1501</li>
+    <li>CS 1502</li>
+    <li>CS 1550</li>
+    <li>CS 1632</li>
+
+</div>
+
 
 </body>
 </html>
