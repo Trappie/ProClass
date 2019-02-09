@@ -1,64 +1,78 @@
 <html lang ="en" fir = "ltr">
 <head>
 <style>
+body{
+    background-image: url("{{url_for('static', filename='rate-display.jpg')}}");
+    color:black;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+div.Professor_info{
+    border-style: dashed; 
+    border-color: grey; 
+    padding-left: 1%; 
+    padding-top: 1%; 
+    margin-left: 400px; 
+    width: 30%; 
+}
+
+#courses{
+    border-style: dotted; 
+    border-color: grey; 
+    padding-left: 1%; 
+    padding-top: 1%; 
+    width: 30%; 
+    margin-left: 400px; 
+}
+
 table{
-    font-family: 'Courier New', Courier, monospace
-    border-collapse: collapse
-    width: 100%
+    font-family: 'Courier New', Courier, monospace; 
+    border-collapse: collapse; 
+    width: 100%; 
 }
 
 td,th{
-    border: 1px solid #dddddd
-    text-alignleft 
-    padding: 8px
+    border: 1px solid #dddddd; 
+    text-align:left; 
+    padding: 8px; 
 }
 
 tr:nth-child(even){
-    background-color: #dddddd
+    background-color: #dddddd; 
 }
 </style>
 </head>
 <body>
     <div class = "Professor_info">
+        <img src="assets/Garrison.jpg" width="70px" height="70px">
         <h3>William Garrison</h3>
-        <p>I am William Garrison, cited as William C. Garrison III,</p> 
-        <p> usually called Bill. I am a lecturer at the Department</p> 
-        <p> of Computer Science at the University of Pittsburgh.</p>
+        <p>Department of Computer Science</p> 
+        <p> University of Pittsburgh.</p>
         <input type="button" value="view more information" onclick="window.location.href='file:///Users/xjzayd/Desktop/TarTanHack/professor_information.html'" />
     </div>
+
     <div class = "rate_result">
+        <div id = "courses">
+        <p><strong>Courses</strong>CS 1501</p>
+            <p><button>view the syllabus</button></p>
+        </div>
         <div id = "scores">
             <h3>Scores</h3>
         </div>
-        <p><strong>Courses</strong>
-            <select>
-                <option value=CS0441>CS441 Discrete Structures</option>
-                <option value="CS0445">CS0445 Data Structures</option>
-                <option value="CS1501">Algorithm Implementation</option>
-                <option value="CS1699">Privacy in the Electronic Society</option>
-            </select>
-            <button>confirm</button>
-            <p><button>view the syllabus</button></p>
-        </p>
-        <table>
-            <tr>
-                <th>Overall</th>
-                <th>Class Organization</th>
-                <th>Difficulty of Exams/Quiz/Paper</th>
-                <th>Lecture style</th>
-            </tr>
-            <tr>
-                <td>9.0  (Excellent!)</td>
-                <td>9.5  (Excellent!)</td>
-                <td>8.5  (Good!)</td>
-                <td>9.0  (Excellent!)</td>
-            </tr>
-        </table>
-        <div id = "tags">
-            <h3>Tags</h3>
-            <p><strong>Easy to communicate </strong>5</p>
-            <p><strong>Well-organized </strong>3</p>
-            <p><strong>Tough Grader </strong>1</p>
+        <div id = "table">
+            <table>
+                <tr>
+                    <th>Overall</th>
+                    <th>Class Organization</th>
+                    <th>Difficulty of Exams/Quiz/Paper</th>
+                    <th>Lecture style</th>
+                </tr>
+                    <tr>
+                        <td>9.0  (Excellent!)</td>
+                        <td>9.5  (Excellent!)</td>
+                        <td>8.5  (Good!)</td>
+                        <td>9.0  (Excellent!)</td>
+                    </tr>
+            </table>
         </div>
         <div id = "Comments">
             <h3>Comments</h3>
