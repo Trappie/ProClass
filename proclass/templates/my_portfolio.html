@@ -2,7 +2,7 @@
 <head>
 <style> 
 body{
-    background-image: url("assets/page_back.png"); 
+    background-image: url("{{url_for('static', filename='rate-display.jpg')}}");
     font-family: Arial, Helvetica, sans-serif; 
 }
 table{
@@ -40,13 +40,13 @@ table{
 }
 
 td,th{
-    border: 1px solid #dddddd
-    text-alignleft 
-    padding: 8px
+    border: 1px solid #dddddd;
+    text-align:left; 
+    padding: 8px;
 }
 
 tr{
-    background-color: #dddddd
+    background-color: #dddddd;
 }
     
 div.topnavbar{

@@ -30,14 +30,14 @@
     <h1>{{ category + " : " + name}}</h1>
     {% if category == 'Class' %}
       <ul class="myUL" id="class_result">
-        {% for result in results %}
-          <li><a href="#"></a>{{result}}</li>
+        {% for professor in results %}
+          <li><a href="{{url_for('pro_class', class_string=(name + '_' + professor.name))}}">{{professor.name}}</a></li>
         {% endfor %}
       </ul>
     {% else %}
       <ul class="myUL" id="professor_result">
-        {% for result in results %}
-          <li><a href="#"></a>{{result}}</li>
+        {% for course in results %}
+          <li><a href="{{url_for('pro_class', class_string=(course.course_name + '_' + name))}}">{{course.course_name+ '_'+name}}</a></li>
         {% endfor %}
       </ul>
     {% endif %}
