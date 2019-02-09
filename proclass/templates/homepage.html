@@ -1,0 +1,33 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Homepage</title>
+		<script>
+			function isHidden(oDiv){
+      	var vDiv = document.getElementById(oDiv);
+      	vDiv.style.display = (vDiv.style.display == 'none')?'block':'none';
+    		}
+		</script>
+</head>
+
+<body>
+
+	<div style="cursor:hand" onclick="isHidden('div1')"><b>Class Search</b></div>
+			<div id ="div1" style="display:none">
+				<input type="text" placeholder="ClassInput" name="classinput" value="{{request.form.classinput}}">
+				<input type="submit" value="Search Class">
+			</div>
+	<div style="cursor:hand" onclick="isHidden('div2')"><b>Professor Search</b></div>
+	<div id ="div2" style="display:none">
+		<input type="text" placeholder="ProfessorInput" name="professorinput" value="{{request.form.professorinput}}">
+		<input type="submit" value="Search Professor">
+	</div>
+	<div style="cursor:hand" onclick="isHidden('div3')"><b>User Search</b></div>
+	<div id ="div3" style="display:none">
+		<input type="text" placeholder="UserInput" name="userinput" value="{{request.form.userinput}}">
+		<input type="submit" value="Search User">
+	</div>
+</body>
+</html>
