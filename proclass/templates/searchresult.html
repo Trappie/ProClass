@@ -5,19 +5,21 @@
     <title>Search Result</title>
   </head>
   <body>
-    <ul id="myUL">
-      {% for professor in professors %}
-      <li><a href= {{ url_for('professor', name=professor.name) }}>{{professor.name}}</a></li>
+    <ul id="class_result">
+      {% for class in classes %}
+        <li><a href= {{ url_for('class', name=class.name) }}>{{class.name}}</a></li>
       {% endfor %}
-      <li><a href= {{ url_for() }}>Adele</a></li>
-      <li><a href="#">Agnes</a></li>
+    </ul>
+    <ul id="professor_result">
+      {% for professor in professors %}
+        <li><a href= {{ url_for('professor', name=professor.name) }}>{{professor.name}}</a></li>
+      {% endfor %}
+    </ul>
+    <ul id="user_result">
+      {% for user in users %}
+        <li><a href= {{ url_for('user', name=user.name) }}>{{user.name}}</a></li>
+      {% endfor %}
+    </ul>
 
-      <li><a href="#">Billy</a></li>
-      <li><a href="#">Bob</a></li>
-
-      <li><a href="#">Calvin</a></li>
-      <li><a href="#">Christina</a></li>
-      <li><a href="#">Cindy</a></li>
-</ul>
   </body>
 </html>
