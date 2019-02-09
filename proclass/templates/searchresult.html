@@ -7,12 +7,17 @@
   <body>
     <h1>{{ category + " : " + name}}</h1>
     {% if category == 'Class' %}
-
-    <ul id="class_result">
-      {% for result in results %}
-      <li>{{result}}</li>
-      {% endfor %}
-    </ul>
+      <ul id="class_result">
+        {% for result in results %}
+          <li>{{result}}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <ul id="professor_result">
+        {% for result in results %}
+          <li>{{result}}</li>
+        {% endfor %}
+      </ul>
     {% endif %}
 
 
