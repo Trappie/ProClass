@@ -5,6 +5,16 @@
     <title>Search Result</title>
   </head>
   <body>
+    <h1>{{ Category + " : " + name}}</h1>
+    {% if category == 'Class' %}
+
+    <ul id="class_result">
+      {% for result in results %}
+      <li>{{result}}</li>
+        <!-- <li><a href= {{ url_for('result', name=class.name) }}>{{class.name}}</a></li> -->
+      {% endfor %}
+    </ul>
+    {% endif %}
     <ul id="class_result">
       {% for class in classes %}
         <li><a href= {{ url_for('class', name=class.name) }}>{{class.name}}</a></li>
