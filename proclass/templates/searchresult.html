@@ -6,7 +6,10 @@
   </head>
   <body>
     <ul id="myUL">
-      <li><a href="#">Adele</a></li>
+      {% for professor in professors %}
+      <li><a href= {{ url_for('professor', name=professor.name) }}>{{professor.name}}</a></li>
+      {% endfor %}
+      <li><a href= {{ url_for() }}>Adele</a></li>
       <li><a href="#">Agnes</a></li>
 
       <li><a href="#">Billy</a></li>
