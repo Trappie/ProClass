@@ -7,21 +7,61 @@ body{
     font-family: Arial, Helvetica, sans-serif; 
 }
 div.Professor_info{
-    border-style: dashed; 
-    border-color: grey; 
-    padding-left: 1%; 
-    padding-top: 1%; 
-    margin-left: 400px; 
-    width: 30%; 
+
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    background-color: aliceblue;
+    float: center;
+    margin-left: 390px;
+    color:#083b66;
+    border: 5px solid #083b66;
+    height: 30%;
+    width: 30%;
+    border-style: dashed;
 }
+    
+    div.topnavbar{
+            overflow: hidden;
+            background-color: azure;
+        }
+        div.topnavbar a{
+            float:right;
+            color: #4c96d7;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            width: 28%;
+        }
+        div.topnavbar a:hover{
+            background-color: #083b66;
+            font-weight: bold;
+            color:whitesmoke;
+        }
+        div.topnavbar a.active{
+            background-color: #4c96d7;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+        div.topnavbar img{
+            padding-left: 20px;
+        }
 
 #courses{
-    border-style: dotted; 
-    border-color: grey; 
-    padding-left: 1%; 
-    padding-top: 1%; 
-    width: 30%; 
-    margin-left: 400px; 
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+    
+    background-color: aliceblue;
+    float: center;
+    margin-left: 390px;
+    color:#083b66;
+    border: 5px solid #083b66;
+    height: 15%;
+    width: 30%;
+    border-style: dashed;
 }
 
 table{
@@ -42,8 +82,15 @@ tr:nth-child(even){
 </style>
 </head>
 <body>
+    <div class="topnavbar">
+        <a href="{{ url_for('class_forum') }}">Forum</a>
+        <a href="{{ url_for('portfolio') }}">My Portfolio</a>
+        <a href="{{ url_for('homepage') }}">Search</a>
+        <img src="{{ url_for('static', filename='logo.png')}}" width="70px" height="50px">
+    </div>
     <div class = "Professor_info">
-        <img src="assets/Garrison.jpg" width="70px" height="70px">
+
+        <img src="{{ url_for('static', filename='Garrison.jpg')}}" width="70px" height="70px">
         <h3>William Garrison</h3>
         <p>Department of Computer Science</p> 
         <p> University of Pittsburgh.</p>
