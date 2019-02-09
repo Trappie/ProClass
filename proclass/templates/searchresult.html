@@ -5,16 +5,21 @@
     <title>Search Result</title>
   </head>
   <body>
-    <ul id="myUL">
-      <li><a href="#">Adele</a></li>
-      <li><a href="#">Agnes</a></li>
+    <h1>{{ category + " : " + name}}</h1>
+    {% if category == 'Class' %}
+      <ul id="class_result">
+        {% for result in results %}
+          <li>{{result}}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <ul id="professor_result">
+        {% for result in results %}
+          <li>{{result}}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
 
-      <li><a href="#">Billy</a></li>
-      <li><a href="#">Bob</a></li>
 
-      <li><a href="#">Calvin</a></li>
-      <li><a href="#">Christina</a></li>
-      <li><a href="#">Cindy</a></li>
-</ul>
   </body>
 </html>

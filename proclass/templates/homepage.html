@@ -14,19 +14,22 @@
 <body>
 
 	<div style="cursor:hand" onclick="isHidden('div1')" method = "post"><b>Class Search</b></div>
-		<form id ="div1" action="" method="post" style="display:none">
+		<form id ="div1" action="{{ url_for('class_search') }}" method="post" style="display:none">
 			<input type="text" placeholder="ClassInput" name="classinput" value={{request.form.classinput}}>
 			<input type="submit" value="Search Class">
 		</form>
 	<div style="cursor:hand" onclick="isHidden('div2')" method = "post"><b>Professor Search</b></div>
-		<form id ="div2" action="" method="post" style="display:none">
+		<form id ="div2" action="{{ url_for('professor_search')}}" method="post" style="display:none">
 			<input type="text" placeholder="ProfessorInput" name="professorinput" value={{request.form.professorinput}}>
 			<input type="submit" value="Search Professor">
 		</form>
-	<div style="cursor:hand" onclick="isHidden('div3')" method = "post"><b>User Search</b></div>
-		<form id ="div3" action="" method="post" style="display:none">
+	<!-- <div style="cursor:hand" onclick="isHidden('div3')" method = "post"><b>User Search</b></div>
+		<form id ="div3" action="{{ url_for('user_search') }}" method="post" style="display:none">
 			<input type="text" placeholder="UserInput" name="userinput" value={{request.form.userinput}}>
 			<input type="submit" value="Search User">
-		</form>
+		</form> -->
+
+        <a href="{{url_for('logout')}}">logout</a>
+
 </body>
 </html>
