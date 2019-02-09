@@ -11,10 +11,12 @@
     <ul id="class_result">
       {% for result in results %}
       <li>{{result}}</li>
-        <!-- <li><a href= {{ url_for('result', name=class.name) }}>{{class.name}}</a></li> -->
       {% endfor %}
     </ul>
     {% endif %}
+
+    <!-- <li><a href= {{ url_for('result', name=class.name) }}>{{class.name}}</a></li> -->
+
     <!-- <ul id="class_result">
       {% for class in classes %}
         <li><a href= {{ url_for('class', name=class.name) }}>{{class.name}}</a></li>
