@@ -1,10 +1,45 @@
 <html lang = "en" fir = "ltr">
 <head>
-<style>
+<style> 
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
 table{
     font-family: 'Courier New', Courier, monospace
     border-collapse: collapse
     width: 100%
+}
+
+#basic_info{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    width: 10%;
+    float: left;
+    margin-left: 20px;
+}
+
+#self_description{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    width: 50%;
+    float: left;
+    margin-left: 300px;
+}
+
+#Course_info{
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    width: 100%;
+    float: left;
+    margin-left: 300px;
+
+}
+
+#Academic-Calender{
+    margin-left: 300px;
 }
 
 td,th{
@@ -16,16 +51,52 @@ td,th{
 tr:nth-child(even){
     background-color: #dddddd
 }
+    
+div.topnavbar{
+overflow: hidden;
+background-color: azure;
+}
+div.topnavbar a{
+    float:right;
+    color: #4c96d7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 28%;
+}
+div.topnavbar a:hover{
+    background-color: #083b66;
+    font-weight: bold;
+    color:whitesmoke;
+}
+div.topnavbar a.active{
+    background-color: #4c96d7;
+    color: whitesmoke;
+    font-weight: bold;
+}
+div.topnavbar img{
+    padding-left: 20px;
+}
+
+    
 </style>
 </head>
 <body>
+    <div class="topnavbar">
+        <a href="#Forum">Forum</a>
+        <a class="active" href="#My Portfolio">My Portfolio</a>
+        <a href="#search">Search</a>
+        <img src="assets/logo.png" width="70px" height="50px">
+    </div>
     <h3>Personal Portfolio</h3>
     <div class = "information">
         <div id = "basic_info">
             <div>
-                <img src="/Users/xjzayd/Desktop/TarTanHack/images/WechatIMG89.jpg" weidth="50" height ="50">
+                <img src="assets/myport.jpg" weidth="50" height ="50">
             </div>
-            <h3> Zhuofei Xie </h3>
+            <h3> Zhuofei Xie <input type="button" value="Go to Chat Room" onclick="window.location.href='file:///Users/xjzayd/Desktop/ProClass/proclass/templates/Chat_room.html'" /></h3>
+            <p><strong>Points: </strong>50</p>
             <p><strong>Major:</strong>Computer Science</p>
             <p><strong>Enrollment Year: </strong>2017</p>
             <p><strong>Year:</strong>sophomore</p>
@@ -63,7 +134,7 @@ tr:nth-child(even){
     </div>
 
     <h3>Current Academic Calender</h3>
-    <div class = "Academic Calender">
+    <div class = "Academic-Calender">
         <div id = "schedule">
             <table>
                 <tr>
