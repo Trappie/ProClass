@@ -4,8 +4,8 @@
 <title>ClassForum</title>
     <style>
     body{
-        background-image: url("{{url_for('static', filename='background.png')}}");
-        color: floralwhite;
+        background-image: url("{{url_for('static', filename='rate-display.jpg')}}");
+        color: black;
     }
     div.topnavbar{
     overflow: hidden;
@@ -50,7 +50,7 @@
 </head>
 <body>
     <div class="topnavbar">
-        <a href="{{ url_for('class_forum') }}">Forum</a>
+        <a class="active" href="{{ url_for('class_forum') }}">Forum</a>
         <a href="{{ url_for('portfolio') }}">My Portfolio</a>
         <a href="{{ url_for('homepage') }}">Search</a>
         <img src="{{ url_for('static', filename='logo.png')}}" width="70px" height="50px">

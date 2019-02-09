@@ -1,9 +1,9 @@
 <html lang = "en" fir = "ltr">
 <head>
-<style> 
+<style>
 body{
     background-image: url("{{url_for('static', filename='rate-display.jpg')}}");
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 table{
     font-family: 'Courier New', Courier, monospace
@@ -21,34 +21,34 @@ table{
 }
 
 #Course_info{
-    margin-top: -270px;
+    margin-top: -140px;
     width: 120%;
     float: left;
     margin-left: 300px;
 }
 
 #rate_post{
-    margin-top: 0px; 
+    margin-top: 0px;
     margin-left: 300px;
     width: 38%
 }
 
 #Academic-Calender{
-    margin-top:50px; 
+    margin-top:50px;
     margin-left: 300px;
-    width: 64%; 
+    width: 64%;
 }
 
 td,th{
     border: 1px solid #dddddd;
-    text-align:left; 
+    text-align:left;
     padding: 8px;
 }
 
 tr{
     background-color: #dddddd;
 }
-    
+
 div.topnavbar{
 overflow: hidden;
 background-color: azure;
@@ -76,23 +76,23 @@ div.topnavbar img{
     padding-left: 20px;
 }
 
-    
+
 </style>
 </head>
 <body>
     <div class="topnavbar">
-        <a href="#Forum">Forum</a>
-        <a class="active" href="#My Portfolio">My Portfolio</a>
-        <a href="#search">Search</a>
-        <img src="assets/logo.png" width="70px" height="50px">
+      <a href="{{ url_for('class_forum') }}">Forum</a>
+     <a class="active" href="{{ url_for('portfolio') }}">My Portfolio</a>
+       <a href="{{ url_for('homepage') }}">Search</a>
+       <img src="{{url_for('static', filename='logo.png')}}" width="70px" height="50px">
     </div>
     <h3>Personal Portfolio</h3>
     <div class = "information">
         <div id = "basic_info">
             <div>
-                <img src="assets/myport.jpg" weidth="50" height ="50">
+                <img src="{{url_for('static', filename='myport.jpg')}}" weidth="50" height ="50">
             </div>
-            <h3> Zhuofei Xie <input type="button" value="Go to Chat Room" onclick="window.location.href='file:///Users/xjzayd/Desktop/ProClass/proclass/templates/Chat_room.html'" /></h3>
+            <h3> Zhuofei Xie <input type="button" value="Go to Chat Room" onclick="window.location.href='{{url_for('chat_room')}}'" /></h3>
             <p><strong>Points: </strong>50</p>
             <p><strong>Major:</strong>Computer Science</p>
             <p><strong>Enrollment Year: </strong>2017</p>
@@ -101,7 +101,7 @@ div.topnavbar img{
             <h3>Self Description</h3>
             <p>This is Zhuofei Xie. I am a sophomore this year and major in computer science.</p>
             <form>
-            <input type="button" value="edit" onclick="window.location.href='/Users/xjzayd/Desktop/ProClass/proclass/templates/edit_portfolio_information.html'" />
+            <input type="button" value="edit" onclick="window.location.href='{{ url_for('edit_portfolio')}}'" />
             </form>
         </div>
         <div id = "Course_info">
@@ -119,7 +119,7 @@ div.topnavbar img{
                 <tr>
                     <td>Dr.Hockensmith</td>
                     <td>MATH 0230</td>
-                    <td>He is a really nice Professor. He gives really 
+                    <td>He is a really nice Professor. He gives really
                         clear introduction and topics on class.</td>
                 </tr>
             </table>

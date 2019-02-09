@@ -11,25 +11,25 @@
 		</script>
         <style>
         body{
-            background-image: url("{{url_for('static', filename='homepage.png')}}");
+            background-image: url("{{url_for('static', filename='homepage.jpg')}}");
             /*background-image: url(assets/homepage.jpg); */
             color:black;
-            font-family: Arial, Helvetica, sans-serif; 
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         div.ClassSearch{
-            width: 25%; 
-            margin-top: 200px; 
-            margin-left: 500px; 
-            font-size: 25px; 
+            width: 25%;
+            margin-top: 200px;
+            margin-left: 500px;
+            font-size: 25px;
         }
         div.ProfessorSeach{
-            width: 25%; 
-            margin-top: 100px; 
-            margin-left: 500px; 
-            font-size: 25px; 
+            width: 25%;
+            margin-top: 100px;
+            margin-left: 500px;
+            font-size: 25px;
         }
-        
+
         div.topnavbar{
             overflow: hidden;
             background-color: azure;
@@ -61,12 +61,12 @@
 
 <body>
      <div class="topnavbar">
-        <a href="#Forum">Forum</a>
-        <a href="#My Portfolio">My Portfolio</a>
-        <a class="active" href="#search">Search</a>
-        <img src="assets/logo.png" width="70px" height="50px">
+			 <a href="{{ url_for('class_forum') }}">Forum</a>
+			 <a href="{{ url_for('portfolio') }}">My Portfolio</a>
+        <a class="active" href="{{ url_for('homepage') }}">Search</a>
+        <img src="{{url_for('static', filename='logo.png')}}" width="70px" height="50px">
     </div>
-    
+
     <div class = "ClassSearch">
 	<div style="cursor:hand" onclick="isHidden('div1')" method = "post"><b>Class Search</b></div>
 		<form id ="div1" action="{{ url_for('class_search') }}" method="post" style="display:none">
