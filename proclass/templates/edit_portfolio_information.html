@@ -1,5 +1,21 @@
 <html lang = "en" fir = "ltr">
 <head>
+<style>    
+body{
+    background-image: url("assets/page_back.png"); 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20; 
+}
+#basic_info{
+    padding-left: 10px; 
+    padding-bottom: 10px; 
+    margin-top: 30px; 
+    width: 30%; 
+    float: center; 
+    margin-left: 500px; 
+}
+
+</style>
     <title>Edit Personal Information</title>
 </head>
 
@@ -20,6 +36,15 @@
                     <option value="Music">Music</option>
                 </select>
             </p>
+            <p><strong>Enrollment Year:</strong>
+                <select>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                </select>
+            </p>
             <p><strong>Year:</strong>
                 <select>
                     <option value="Freshmen">Freshmen</option>
@@ -28,9 +53,16 @@
                     <option value="Junior">Junior</option>
                 </select>
             </p>
+            <p><strong>School:</strong>
+                <input type="text">
+            </p>
+            <p><strong>Self Description: </strong>
+                <input type="text">
+            </p>
+            <form>
+                    <input type="button" value="save" onclick="window.location.href='/Users/xjzayd/Desktop/ProClass/proclass/templates/my_portfolio.html'" />
+            </form>
+            
         </div>
-        <form>
-                <input type="button" value="save" onclick="window.location.href='file:///Users/xjzayd/Desktop/TarTanHack/my_portfolio.html'" />
-        </form>
     </div>
 </body>
